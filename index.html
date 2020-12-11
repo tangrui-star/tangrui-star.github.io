@@ -152,19 +152,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-nihaoya" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-hexo搭建步骤" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/10/nihaoya/">nihaoya</a>
+      <a class="article-title" href="/2020/12/10/hexo%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/">搭建hexo步骤</a>
     </h1>
   
 
         
-        <a href="/2020/12/10/nihaoya/" class="archive-article-date">
+        <a href="/2020/12/10/hexo%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/" class="archive-article-date">
   	<time datetime="2020-12-10T13:54:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-10</time>
 </a>
         
@@ -172,7 +172,164 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="搭建hexo步骤"><a href="#搭建hexo步骤" class="headerlink" title="搭建hexo步骤"></a>搭建hexo步骤</h4><h5 id="一、node-js-和-git-环境的搭建"><a href="#一、node-js-和-git-环境的搭建" class="headerlink" title="一、node.js  和 git  环境的搭建"></a>一、node.js  和 git  环境的搭建</h5><blockquote>
+<p>node  -v   和   npm -v</p>
+<p><strong><img src="C:\Users\13059\AppData\Roaming\Typora\typora-user-images\image-20201210175035191.png" alt="image-20201210175035191"></strong></p>
+</blockquote>
+<blockquote>
+<p>git 安装</p>
+</blockquote>
+<h5 id="二、安装hexo"><a href="#二、安装hexo" class="headerlink" title="二、安装hexo"></a>二、安装hexo</h5><ol>
+<li><p>在本地文件中创建一个Blog文件夹，框架和发布的网页都在此</p>
+</li>
+<li><p>管理员cmd：</p>
+<ul>
+<li>进入Blog文件夹</li>
+<li>npm install -g hexo-cli  —-安装hexo  hexo-cli是完整版<ul>
+<li>初–用npm install -g hexo-cli </li>
+<li>熟悉后用—-npm install hexo</li>
+</ul>
+</li>
+<li>以上则  hexo安装 完毕</li>
+</ul>
+</li>
+<li><p>在Blog文件夹  初始化  hexo</p>
+<ol>
+<li><blockquote>
+<ul>
+<li>hexo init  &lt;目标文件名：如Blog&gt;</li>
+<li>cd Blog</li>
+<li>npm install</li>
+</ul>
+</blockquote>
+</li>
+<li><p>完成后：</p>
+<ul>
+<li>文件目录如下  在Blog中</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>_config.yml</strong>  这便是 hexo网站的配置文件 </li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>尝试新建一个 hexo 文章</p>
+<ol>
+<li><p>hexo new hello world</p>
+</li>
+<li><p>hexo generate  </p>
+<ul>
+<li>简写：hexo g  —  生成静态文件</li>
+</ul>
+</li>
+<li><p>hexo server</p>
+<ul>
+<li>简写：hexo s   —  启动服务器。默认情况下，访问<a target="_blank" rel="noopener" href="http://localhost.4000/">http://localhost.4000/</a></li>
+</ul>
+</li>
+<li><p>效果如下：</p>
+<blockquote>
+<img src="C:\Users\13059\AppData\Roaming\Typora\typora-user-images\image-20201210183706387.png" alt="image-20201210183706387" style="zoom: 25%;" />
+</blockquote>
+</li>
+<li><p>以上 本地的准备工作搞定！！！</p>
+</li>
+</ol>
+</li>
+<li><p><strong>github 访问不了</strong></p>
+<ol>
+<li>在  C:\Windows\System32\drivers\etc   文件 hosts</li>
+</ol>
+<ul>
+<li><p>在这个网站 查询  github.com   <a target="_blank" rel="noopener" href="http://tool.chinaz.com/dns/">http://tool.chinaz.com/dns/</a></p>
+</li>
+<li><p>192.30.255.112</p>
+</li>
+<li><p>52.192.72.89</p>
+<blockquote>
+<img src="C:\Users\13059\AppData\Roaming\Typora\typora-user-images\image-20201210190531250.png" alt="image-20201210190531250" style="zoom: 67%;" />
+</blockquote>
+</li>
+<li><p>cmd 命令行 </p>
+<blockquote>
+<p>ipconfig /flushdns</p>
+</blockquote>
+</li>
+<li><p>ok可以访问！！！</p>
+</li>
+</ul>
+</li>
+<li><p>部署  <strong>hexo</strong> 到 github上</p>
+<ol>
+<li><p>在github上建立  tangrui-star.github.io</p>
+</li>
+<li><p>npm install hexo-deployer-git –save</p>
+<ul>
+<li>安装一个Git部署插件</li>
+</ul>
+</li>
+<li><p>在   <strong>_config.yml</strong>   文件夹里配置</p>
+<blockquote>
+<ul>
+<li><pre><code>deploy:
+  type: git
+  repo: git@github.com:tangrui-star/tangrui-star.github.io.git
+  branch: master</code></pre>
+<p>其中：repo 是创建github仓库时的  SSH 复制过来就OK</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>部署到github上</p>
+<ul>
+<li>hexo d</li>
+<li>刷新github的页面，会发现多了很多东西，则部署成功</li>
+<li>打开浏览器：   <a target="_blank" rel="noopener" href="https://tangrui-star.github.io/">https://tangrui-star.github.io</a>  就可以访问成功 </li>
+<li>恭喜你的个人博客上线了</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h5 id="三、更换-hexo-主题"><a href="#三、更换-hexo-主题" class="headerlink" title="三、更换 hexo 主题"></a>三、更换 hexo 主题</h5><ol>
+<li><p>找到主题，github上有很多主题，供选择</p>
+</li>
+<li><p>在Blog目录下</p>
+<ul>
+<li>git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a>   </li>
+<li>git clone <a target="_blank" rel="noopener" href="https://github.com/qisi007/react-admin-plus.git">https://github.com/qisi007/react-admin-plus.git</a></li>
+<li>themes/yilia</li>
+<li>主题下载完成</li>
+</ul>
+</li>
+<li><p>打开   <strong>_config.yml</strong>  配置文件</p>
+<ul>
+<li><p>找到   <strong>theme</strong>     ：换名</p>
+<blockquote>
+<ul>
+<li>hexo clean     重新清理一下</li>
+<li>hexo g            重新生成静态文件</li>
+<li>hexo s            重新部署一下项目</li>
+<li>hexo d            重新推到github上</li>
+</ul>
+<p>再次网络访问。</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>ok 以上是，初步完成git关联的个人博客</p>
+</li>
+</ol>
+<h5 id="四、hexo命令操作"><a href="#四、hexo命令操作" class="headerlink" title="四、hexo命令操作"></a>四、hexo命令操作</h5><ol>
+<li><p>网站地址 ：  hexo.io</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.liuguisheng.vip/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">https://www.liuguisheng.vip/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a></p>
+<p>这个网站研究研究，很不错</p>
+</li>
+</ol>
+<h5 id="五、hexo配置理解"><a href="#五、hexo配置理解" class="headerlink" title="五、hexo配置理解"></a>五、hexo配置理解</h5>
       
 
       
@@ -184,7 +341,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/10/nihaoya/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/12/10/hexo%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4/">展开全文 >></a>
         </p>
       
 
